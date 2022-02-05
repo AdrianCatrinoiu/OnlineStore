@@ -1,0 +1,44 @@
+[
+  {
+    "id": 0,
+    "name": "Weird Crocs",
+    "price": 510,
+    "image": "/images/weird_crocs.jpeg",
+    "description": "The weirdest thing i have ever seen in fashion"
+  },
+  {
+    "id": 1,
+    "name": "Givenchy shoes",
+    "price": 700,
+    "image": "/images/givenchy_shoes.jpeg",
+    "description": "Givenchy's forward-thinking graphic aesthetic lends itself to these Spectre low-top sneakers with technical detailing seen in the double lace and side-zip logo fastening."
+  },
+  {
+    "id": 2,
+    "name": "Weird Crocs2",
+    "price": 515,
+    "image": "/images/weird_crocs.jpeg",
+    "description": "The weirdest thing i have ever seen in fashion"
+  },
+  {
+    "id": 3,
+    "name": "Givenchy shoes2",
+    "price": 705,
+    "image": "/images/givenchy_shoes.jpeg",
+    "description": "Givenchy's forward-thinking graphic aesthetic lends itself to these Spectre low-top sneakers with technical detailing seen in the double lace and side-zip logo fastening."
+  },
+  {
+    "id": 4,
+    "name": "Weird Crocs3",
+    "price": 520,
+    "image": "/images/weird_crocs.jpeg",
+    "description": "The weirdest thing i have ever seen in fashion"
+  },
+  {
+    "id": 5,
+    "name": "Givenchy shoes3",
+    "price": 710,
+    "image": "/images/givenchy_shoes.jpeg",
+    "description": "Givenchy's forward-thinking graphic aesthetic lends itself to these Spectre low-top sneakers with technical detailing seen in the double lace and side-zip logo fastening."
+  }
+]
