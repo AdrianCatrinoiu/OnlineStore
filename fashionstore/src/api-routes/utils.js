@@ -1,7 +1,5 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:3000";
-
 export const axiosCall = async ({ method, path, token = null, data }) => {
   const headers = {
     "Content-Type": "application/json",
@@ -10,7 +8,7 @@ export const axiosCall = async ({ method, path, token = null, data }) => {
 
   const res = axios({
     method: method,
-    url: API_URL + path,
+    url: process.env.REACT_APP_BASE_URL + path,
     headers: headers,
     data: data,
   });

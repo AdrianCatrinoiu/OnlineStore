@@ -1,14 +1,14 @@
 import React from "react";
 import Products from "../../components/Products/Products";
-import HomePageLayout from "../../layouts/HomePageLayout/HomePageLayout";
+import MainLayout from "../../layouts/MainLayout/MainLayout";
 
 const Search = () => {
   return (
-    <HomePageLayout>
+    <MainLayout>
       <div className="searchPage">
         <Products />
       </div>
-    </HomePageLayout>
+    </MainLayout>
   );
 };
 

@@ -1,32 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import "./styles.scss";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/logo.png";
+import { signOutUserStart } from "../../redux/User/user.actions";
 
-const Navbar = () => {
-  const [isNavVisible, setNavVisibility] = useState(false);
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
+const mapState = ({ user }) => ({
+  currentUser: user.currentUser,
+});
 
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 700px)");
-    mediaQuery.addEventListener("resize", handleMediaQueryChange);
-    handleMediaQueryChange(mediaQuery);
+const Header = (props) => {
+  const dispatch = useDispatch();
+  const { currentUser } = useSelector(mapState);
 
-    return () => {
-      mediaQuery.removeEventListener("resize", handleMediaQueryChange);
-    };
-  }, []);
-
-  const handleMediaQueryChange = (mediaQuery) => {
-    if (mediaQuery.matches) {
-      setIsSmallScreen(true);
-    } else {
-      setIsSmallScreen(false);
-    }
-  };
-
-  const toggleNav = () => {
-    setNavVisibility(!isNavVisible);
+  const signOut = () => {
+    dispatch(signOutUserStart());
   };
 
   return (
@@ -38,21 +26,41 @@ const Navbar = () => {
           </Link>
         </div>
         <nav>
-          <div className="callToActions">
-            {(!isSmallScreen || isNavVisible) && (
-              <>
-                <Link to="/"> Home</Link>
-                <Link to="/search"> Browse</Link>
-              </>
-            )}
-          </div>
-          <span onClick={toggleNav} className="burgerMenu">
-            ≡
-          </span>
+          <ul>
+            <li>
+              <Link to="/"> Home</Link>
+            </li>
+            <li>
+              <Link to="/search"> Search</Link>
+            </li>
+          </ul>
         </nav>
+        <div className="callToActions">
+          {currentUser && (
+            <ul>
+              <li>
+                <Link to="/dashboard">My account</Link>
+              </li>
+              <li>
+                <span onClick={() => signOut()}>Logout</span>
+              </li>
+            </ul>
+          )}
+          {!currentUser && (
+            <ul>
+              <li>
+                <Link to="/register">Register</Link>
+              </li>
+
+              <li>
+                <Link to="/login">Login</Link>
+              </li>
+            </ul>
+          )}
+        </div>
       </div>
     </header>
   );
 };
 
-export default Navbar;
+export default Header;
