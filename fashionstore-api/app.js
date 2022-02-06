@@ -48,41 +48,32 @@ const getData = (json) => {
 };
 
 /* Read - GET method */
-app.get("/search", (req, res) => {
+
+app.get("/api/store/products", (req, res) => {
   const products = getData("./db/products.json");
-
-  res.send(products);
-});
-
-/* Create - POST method */
-app.post("/search/add", (req, res) => {
-  //get the existing product data
-  const existsProducts = getData("/db/products.json");
-
-  //get the new product data from post request
-  const productData = req.body;
-  //check if the productData fields are missing
-  if (
-    product.name == null ||
-    product.price == null ||
-    product.image == null ||
-    product.description == null
-  ) {
-    return res.status(401).send({ error: true, msg: "Product data missing" });
+  console.log(products);
+  const params = req.query;
+  console.log(params);
+  if (params.category) {
+    const category_products = products.filter(
+      (product) => product.category === params.category
+    );
+    if (params.pageNav) {
+      const category_products_paginated = paginatedResult(
+        params.pageNav,
+        category_products
+      );
+      res.send(category_products_paginated);
+    } else {
+      console.log(category_products);
+      res.send(category_products);
+    }
+  } else if (params.pageNav) {
+    const paginated_products = paginatedResult(params.pageNav, products);
+    res.send(paginated_products);
+  } else {
+    res.send(products);
   }
-
-  //check if the name exist already
-  const findExist = existsProducts.find(
-    (product) => product.name === productData.name
-  );
-  if (findExist) {
-    return res.status(409).send({ error: true, msg: "name already exist" });
-  }
-  //append the product data
-  existsProducts.push(productData);
-  //save the new product data
-  saveproductData(existsProducts);
-  res.send({ success: true, msg: "Product data added successfully" });
 });
 
 app.post("/api/auth/login", (req, res) => {
@@ -111,7 +102,6 @@ app.post("/api/auth/login", (req, res) => {
   }
 });
 
-/* Create - POST method */
 app.post("/api/auth/register", (req, res) => {
   //get the existing user data
   const existUsers = getData("./db/users.json");
