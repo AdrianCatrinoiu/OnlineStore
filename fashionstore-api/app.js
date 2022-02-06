@@ -46,30 +46,33 @@ const getData = (json) => {
   const jsonData = fs.readFileSync(json);
   return JSON.parse(jsonData);
 };
-
+const paginatedResult = (page, array) => {
+  const limit = 6;
+  const startIndex = (page - 1) * limit;
+  const endIndex = page * limit;
+  return array.slice(startIndex, endIndex);
+};
 /* Read - GET method */
 
 app.get("/api/store/products", (req, res) => {
   const products = getData("./db/products.json");
-  console.log(products);
   const params = req.query;
   console.log(params);
   if (params.category) {
     const category_products = products.filter(
       (product) => product.category === params.category
     );
-    if (params.pageNav) {
+    if (params.page) {
       const category_products_paginated = paginatedResult(
-        params.pageNav,
+        params.page,
         category_products
       );
       res.send(category_products_paginated);
     } else {
-      console.log(category_products);
       res.send(category_products);
     }
-  } else if (params.pageNav) {
-    const paginated_products = paginatedResult(params.pageNav, products);
+  } else if (params.page) {
+    const paginated_products = paginatedResult(params.page, products);
     res.send(paginated_products);
   } else {
     res.send(products);
