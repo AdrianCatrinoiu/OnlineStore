@@ -24,3 +24,13 @@ export const setProduct = (product) => ({
   type: productsTypes.SET_PRODUCT,
   payload: product,
 });
+
+export const addProductStart = (productData) => ({
+  type: productsTypes.ADD_NEW_PRODUCT_START,
+  payload: productData,
+});
+
+export const deleteProductStart = ({ sku, pageNav = null }) => ({
+  type: productsTypes.DELETE_PRODUCT_START,
+  payload: { sku, pageNav },
+});

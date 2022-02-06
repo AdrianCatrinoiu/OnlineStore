@@ -4,6 +4,7 @@ import "./styles.scss";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 import { signOutUserStart } from "../../redux/User/user.actions";
+import { checkUserIsAdmin } from "../../utils";
 
 const mapState = ({ user }) => ({
   currentUser: user.currentUser,
@@ -12,6 +13,7 @@ const mapState = ({ user }) => ({
 const Navbar = (props) => {
   const dispatch = useDispatch();
   const { currentUser } = useSelector(mapState);
+  const isAdmin = checkUserIsAdmin(currentUser);
 
   const signOut = () => {
     dispatch(signOutUserStart());
@@ -38,6 +40,12 @@ const Navbar = (props) => {
         <div className="callToActions">
           {currentUser && (
             <ul>
+              {isAdmin && (
+                <li>
+                  <Link to="/admin">Admin panel</Link>
+                </li>
+              )}
+
               <li>
                 <Link to="/dashboard">My account</Link>
               </li>

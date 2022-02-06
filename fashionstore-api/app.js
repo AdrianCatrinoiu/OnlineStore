@@ -21,7 +21,6 @@ const generateToken = (data) => {
 
 const authenticateJWT = (req, res, next) => {
   const authHeader = req.headers.authorization;
-
   if (authHeader) {
     const token = authHeader.split(" ")[1];
 
@@ -115,6 +114,40 @@ app.get("/api/store/products", (req, res) => {
       data: products,
     };
     res.send(data);
+  }
+});
+
+app.post("/api/store/products", authenticateJWT, (req, res) => {
+  const products = getData("./db/products.json");
+  const product = req.body;
+  const find_exist = products.find((prod) => prod.sku === product.sku);
+  if (find_exist) {
+    res.status(401).send("Item exists");
+  } else {
+    const new_products = [...products, product];
+    console.log(new_products);
+    saveData(new_products, "./db/products.json");
+    res.status(200).send("Item added");
+  }
+});
+
+app.delete("/api/store/products", authenticateJWT, (req, res) => {
+  const products = getData("./db/products.json");
+  const params = req.query;
+  if (params.sku) {
+    const find_exist = products.find(
+      (prod) => prod.sku === parseInt(params.sku)
+    );
+    if (!find_exist) {
+      res.status(401).send("Item not found");
+    } else {
+      const new_products = products.filter(
+        (product) => parseInt(product.sku) !== parseInt(params.sku)
+      );
+      console.log(new_products);
+      saveData(new_products, "./db/products.json");
+      res.status(200).send("Item removed");
+    }
   }
 });
 

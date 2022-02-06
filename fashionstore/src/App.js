@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 import "./App.scss";
+import Admin from "./pages/Admin";
 import Dashboard from "./pages/Dashboard";
 import Homepage from "./pages/HomePage";
 import Login from "./pages/Login";
@@ -25,6 +26,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/admin" element={<Admin />} />
         <Route path="/product/:id" element={<ProductDetails />} />
       </Routes>
     </div>
