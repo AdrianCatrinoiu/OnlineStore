@@ -5,7 +5,6 @@ import userIMG from "../../assets/user.png";
 const UserProfile = (props) => {
   const { currentUser } = props;
   const { first_name, last_name } = currentUser;
-  console.log(currentUser);
   return (
     <div className="userProfile">
       <ul>

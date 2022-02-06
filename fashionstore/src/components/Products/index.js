@@ -86,12 +86,11 @@ const ProductResults = () => {
           const { sku, name, price, image } = product;
           if (!image || !name || typeof price === "undefined") return null;
           const configProduct = {
-            sku,
             name,
             price,
             image,
+            ...product,
           };
-          console.log(configProduct);
           return <Product key={pos} {...configProduct} />;
         })}
       </div>

@@ -5,6 +5,7 @@ import "./App.scss";
 import Dashboard from "./pages/Dashboard";
 import Homepage from "./pages/HomePage";
 import Login from "./pages/Login";
+import ProductDetails from "./pages/ProductDetails";
 import Register from "./pages/Register";
 import Search from "./pages/Search";
 import { checkUserSession } from "./redux/User/user.actions";
@@ -24,6 +25,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
       </Routes>
     </div>
   );

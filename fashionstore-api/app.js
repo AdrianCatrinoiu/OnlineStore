@@ -60,7 +60,6 @@ const paginatedResult = (page, array) => {
   if (array.length > endIndex) {
     next = true;
   }
-  console.log(next + " " + prev);
   const data = {
     array: array.slice(startIndex, endIndex),
     next,
@@ -73,7 +72,15 @@ const paginatedResult = (page, array) => {
 app.get("/api/store/products", (req, res) => {
   const products = getData("./db/products.json");
   const params = req.query;
-  console.log(params);
+  if (params.sku) {
+    const product = products.filter(
+      (product) => parseInt(product.sku) === parseInt(params.sku)
+    );
+    const data = {
+      data: product[0],
+    };
+    res.send(data);
+  }
   if (params.category) {
     const category_products = products.filter(
       (product) => product.category === params.category
@@ -102,7 +109,6 @@ app.get("/api/store/products", (req, res) => {
       next,
       prev,
     };
-    console.log(data);
     res.send(data);
   } else {
     const data = {

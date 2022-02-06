@@ -10,13 +10,11 @@ import { axiosCall } from "../../api-routes/utils";
 export function* emailSignIn({ payload: { email, password } }) {
   try {
     //setState pt login -- yield sign in
-    console.log(process.env.REACT_APP_BASE_URL + "/api/auth/login");
     const data = yield call(axiosCall, {
       method: "POST",
       path: "/api/auth/login",
       data: { email, password },
     });
-    console.log(data);
 
     if (data.status === 200) {
       localStorage.setItem("accessToken", data.data.accessToken);
@@ -28,9 +26,7 @@ export function* emailSignIn({ payload: { email, password } }) {
         ...data.data.user,
       })
     );
-  } catch (err) {
-    console.log(err);
-  }
+  } catch (err) {}
 }
 
 export function* onEmailSignInStart() {
@@ -41,7 +37,6 @@ export function* onEmailSignInStart() {
 export function* isUserAuthenticated() {
   try {
     const check = localStorage.getItem("accessToken");
-    console.log("ASJDHASKDAHDJASHD " + check);
     if (!check) return;
 
     yield;
@@ -91,8 +86,6 @@ export function* signUpUser({
       );
       localStorage.setItem("accessToken", data.data.accessToken);
     }
-
-    console.log(data);
   } catch (e) {}
 }
 

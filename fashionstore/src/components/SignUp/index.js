@@ -32,8 +32,6 @@ const SignUp = (props) => {
     setErrors([]);
   };
   useEffect(() => {
-    console.log(currentUser);
-
     if (currentUser) {
       reset();
       navigate("/");

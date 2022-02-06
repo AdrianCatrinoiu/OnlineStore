@@ -14,3 +14,13 @@ export const changePage = (page) => ({
   type: productsTypes.CHANGE_PAGE,
   payload: page,
 });
+
+export const fetchProductStart = (id) => ({
+  type: productsTypes.FETCH_PRODUCT_START,
+  payload: id,
+});
+
+export const setProduct = (product) => ({
+  type: productsTypes.SET_PRODUCT,
+  payload: product,
+});
