@@ -161,7 +161,7 @@ app.post("/api/auth/login", (req, res) => {
     const token = generateToken({
       role: user.role,
       email: user.email,
-      name: user.name,
+      name: user.lastName,
     });
 
     res.json({
@@ -209,14 +209,16 @@ app.post("/api/auth/register", (req, res) => {
   const token = generateToken({
     role: "user",
     email: userData.email,
-    name: userData.name,
+    name: userData.lastName,
   });
 
   res.status(201).json({
     accessToken: token,
     user: {
+      id: userData.id,
       email: userData.email,
-      name: userData.name,
+      last_name: userData.lastName,
+      first_name: userData.firstName,
       role: userData.role,
     },
   });

@@ -1,18 +1,1 @@
-[
-  {
-    "id": 5417301,
-    "email": "mail5@mail.com",
-    "password": "Parola123.",
-    "firstName": "Adrian",
-    "lastName": "Catrinoiu",
-    "role": "user"
-  },
-  {
-    "id": 5417302,
-    "email": "mail1@mail.com",
-    "password": "Parola123.",
-    "firstName": "Adrian",
-    "lastName": "Catrinoiu",
-    "role": "admin"
-  }
-]
+[{"id":5417301,"email":"mail5@mail.com","password":"Parola123.","firstName":"Adrian","lastName":"Catrinoiu","role":"user"},{"id":5417302,"email":"mail1@mail.com","password":"Parola123.","firstName":"Adrian","lastName":"Catrinoiu","role":"admin"},{"id":6667282,"email":"mail@adrian.com","password":"Parola123.","firstName":"Adrian","lastName":"Catrinoiu","role":"user"},{"id":9141272,"email":"mail@nortec.com","password":"Parola123.","firstName":"Adrian","lastName":"Catrinoiu","role":"user"},{"id":1107276,"email":"","password":"","firstName":"","lastName":"","role":"user"},{"id":7388940,"email":"mail4@mail.com","firstName":"Adrian","lastName":"Catrinoiu","password":"Parola123.","role":"user"},{"id":3716601,"email":"mail@123.com","password":"Parola123.","firstName":"Adrian","lastName":"Catrinoiu","role":"user"}]

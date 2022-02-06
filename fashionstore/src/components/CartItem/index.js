@@ -9,11 +9,11 @@ import {
 
 const Item = (product) => {
   const dispatch = useDispatch();
-  const { name, image, price, quantity, id } = product;
-  const handleRemoveCartItem = (id) => {
+  const { name, image, price, quantity, sku } = product;
+  const handleRemoveCartItem = (sku) => {
     dispatch(
       removeCartItem({
-        id,
+        sku,
       })
     );
   };
@@ -29,7 +29,7 @@ const Item = (product) => {
       <tbody>
         <tr>
           <td>
-            <img src={image} alt={name} />
+            <img src={process.env.REACT_APP_BASE_URL + image} alt={name} />
           </td>
           <td>{name}</td>
           <td>
@@ -45,7 +45,7 @@ const Item = (product) => {
           </td>
           <td>${price}</td>
           <td align="center">
-            <span className="cartBtn" onClick={() => handleRemoveCartItem(id)}>
+            <span className="cartBtn" onClick={() => handleRemoveCartItem(sku)}>
               X
             </span>
           </td>

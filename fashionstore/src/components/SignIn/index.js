@@ -59,13 +59,6 @@ const SignIn = (props) => {
               handleChange={(e) => setPassword(e.target.value)}
             />
             <Button type="submit">Login</Button>
-            <div className="socialSignIn">
-              <div className="row">
-                <Button onClick={googleHandleSignIn}>
-                  Sign in with google
-                </Button>
-              </div>
-            </div>
           </form>
         </div>
       </div>
