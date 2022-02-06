@@ -1,0 +1,16 @@
+.cartItem {
+  td img {
+    padding: 2rem;
+
+    margin: 1rem auto;
+    max-width: 20rem;
+    max-height: 20rem;
+    display: block;
+    width: 100%;
+  }
+}
+
+.cartBtn {
+  cursor: pointer;
+  padding: 0.5rem;
+}

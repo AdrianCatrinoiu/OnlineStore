@@ -1,0 +1,11 @@
+.products {
+  display: inline-block;
+  width: 100%;
+  padding: 0;
+  margin: 1.8rem 0;
+  .productResults {
+    margin: 0 -1rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
