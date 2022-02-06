@@ -1,11 +1,14 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "./../../forms/Button";
 import "./styles.scss";
+import { useDispatch } from "react-redux";
+import { addProduct } from "../../redux/Cart/cart.actions";
 
 const Product = (product) => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { sku, name, price, image } = product;
-  useEffect(() => {}, []);
   if (!sku || !image || !name || typeof price === "undefined") return null;
 
   const configAddToCartBtn = {
@@ -13,7 +16,9 @@ const Product = (product) => {
   };
   const handleAddToCart = (product) => {
     if (!product) return;
-    return;
+
+    dispatch(addProduct(product));
+    navigate("/cart");
   };
   return (
     <div className="product">

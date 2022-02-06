@@ -6,11 +6,13 @@ import { signOutUserStart } from "../../redux/User/user.actions";
 import Navbar from "../../components/Navbar";
 import VerticalNav from "../../components/VerticalNav";
 import Footer from "../../components/Footer";
+import { emptyCart } from "../../redux/Cart/cart.actions";
 
 const AdminLayout = (props) => {
   const dispatch = useDispatch();
 
   const signOut = () => {
+    dispatch(emptyCart());
     dispatch(signOutUserStart());
   };
 

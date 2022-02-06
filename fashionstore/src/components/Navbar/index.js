@@ -5,17 +5,20 @@ import { Link } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 import { signOutUserStart } from "../../redux/User/user.actions";
 import { checkUserIsAdmin } from "../../utils";
-
-const mapState = ({ user }) => ({
-  currentUser: user.currentUser,
+import { selectCartItemsCount } from "../../redux/Cart/cart.selectors";
+import { emptyCart } from "../../redux/Cart/cart.actions";
+const mapState = (state) => ({
+  currentUser: state.user.currentUser,
+  totalNumberCartItems: selectCartItemsCount(state),
 });
 
 const Navbar = (props) => {
   const dispatch = useDispatch();
-  const { currentUser } = useSelector(mapState);
+  const { currentUser, totalNumberCartItems } = useSelector(mapState);
   const isAdmin = checkUserIsAdmin(currentUser);
 
   const signOut = () => {
+    dispatch(emptyCart());
     dispatch(signOutUserStart());
   };
 
@@ -29,6 +32,11 @@ const Navbar = (props) => {
         </div>
         <nav>
           <ul>
+            {isAdmin && (
+              <li>
+                <Link to="/admin">Admin panel</Link>
+              </li>
+            )}
             <li>
               <Link to="/"> Home</Link>
             </li>
@@ -38,33 +46,31 @@ const Navbar = (props) => {
           </ul>
         </nav>
         <div className="callToActions">
-          {currentUser && (
-            <ul>
-              {isAdmin && (
-                <li>
-                  <Link to="/admin">Admin panel</Link>
-                </li>
-              )}
-
+          <ul>
+            {currentUser && [
+              <li>
+                <Link to="/cart">Your Cart({totalNumberCartItems})</Link>
+              </li>,
               <li>
                 <Link to="/dashboard">My account</Link>
-              </li>
+              </li>,
               <li>
                 <span onClick={() => signOut()}>Logout</span>
-              </li>
-            </ul>
-          )}
-          {!currentUser && (
-            <ul>
+              </li>,
+            ]}
+          </ul>
+
+          <ul>
+            {!currentUser && [
               <li>
                 <Link to="/register">Register</Link>
-              </li>
+              </li>,
 
               <li>
                 <Link to="/login">Login</Link>
-              </li>
-            </ul>
-          )}
+              </li>,
+            ]}
+          </ul>
         </div>
       </div>
     </header>

@@ -9,6 +9,7 @@ import Login from "./pages/Login";
 import ProductDetails from "./pages/ProductDetails";
 import Register from "./pages/Register";
 import Search from "./pages/Search";
+import Cart from "./pages/Cart";
 import { checkUserSession } from "./redux/User/user.actions";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/search/:filterType" element={<Search />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/product/:id" element={<ProductDetails />} />
