@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import Button from "./../../forms/Button/Button";
+import Button from "./../../forms/Button";
 import "./styles.scss";
 
 const Product = (product) => {
-  const { id, name, price, image } = product;
+  const { sku, name, price, image } = product;
   useEffect(() => {}, []);
-  if (!id || !image || !name || typeof price === "undefined") return null;
+  if (!sku || !image || !name || typeof price === "undefined") return null;
 
   const configAddToCartBtn = {
     type: "button",
@@ -18,7 +18,7 @@ const Product = (product) => {
   return (
     <div className="product">
       <div className="image">
-        <Link to={`/product/${id}`}>
+        <Link to={`/product/${sku}`}>
           <img src={process.env.REACT_APP_BASE_URL + image} alt={name} />
         </Link>
       </div>
@@ -26,7 +26,7 @@ const Product = (product) => {
       <div className="details">
         <ul>
           <li>
-            <Link to={`/product/${id}`}>
+            <Link to={`/product/${sku}`}>
               <span>{name}</span>
             </Link>
           </li>

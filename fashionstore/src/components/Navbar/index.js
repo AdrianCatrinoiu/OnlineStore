@@ -9,7 +9,7 @@ const mapState = ({ user }) => ({
   currentUser: user.currentUser,
 });
 
-const Header = (props) => {
+const Navbar = (props) => {
   const dispatch = useDispatch();
   const { currentUser } = useSelector(mapState);
 
@@ -63,4 +63,4 @@ const Header = (props) => {
   );
 };
 
-export default Header;
+export default Navbar;

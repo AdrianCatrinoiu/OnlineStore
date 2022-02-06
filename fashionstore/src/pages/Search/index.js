@@ -1,6 +1,6 @@
 import React from "react";
-import Products from "../../components/Products/Products";
-import MainLayout from "../../layouts/MainLayout/MainLayout";
+import Products from "../../components/Products";
+import MainLayout from "../../layouts/MainLayout";
 
 const Search = () => {
   return (

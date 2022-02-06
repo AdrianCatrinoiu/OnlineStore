@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { emailSignInStartAction } from "../../redux/User/user.actions";
 import "./styles.scss";
-import FormInput from "../../forms/FormInput/FormInput";
-import Button from "../../forms/Button/Button";
+import FormInput from "../../forms/FormInput";
+import Button from "../../forms/Button";
 
 const mapState = ({ user }) => ({
   currentUser: user.currentUser,
