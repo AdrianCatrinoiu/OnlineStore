@@ -1,1 +1,202 @@
-[{"sku":1,"name":"Weird Crocs","price":510,"category":"M","image":"/images/weird_crocs.jpeg","description":"The weirdest thing i have ever seen in fashion"},{"sku":2,"name":"Givenchy shoes","price":700,"category":"M","image":"/images/givenchy_shoes.jpeg","description":"Givenchy's forward-thinking graphic aesthetic lends itself to these Spectre low-top sneakers with technical detailing seen in the double lace and side-zip logo fastening."},{"sku":3,"name":"Weird Crocs2","price":515,"category":"M","image":"/images/weird_crocs.jpeg","description":"The weirdest thing i have ever seen in fashion"},{"sku":4,"name":"Givenchy shoes2","price":705,"category":"W","image":"/images/givenchy_shoes.jpeg","description":"Givenchy's forward-thinking graphic aesthetic lends itself to these Spectre low-top sneakers with technical detailing seen in the double lace and side-zip logo fastening."},{"sku":5,"name":"Weird Crocs3","price":520,"category":"W","image":"/images/weird_crocs.jpeg","description":"The weirdest thing i have ever seen in fashion"},{"sku":6,"name":"Givenchy shoes3","price":710,"category":"W","image":"/images/givenchy_shoes.jpeg","description":"Givenchy's forward-thinking graphic aesthetic lends itself to these Spectre low-top sneakers with technical detailing seen in the double lace and side-zip logo fastening."},{"sku":7,"name":"Weird Crocs","price":510,"category":"M","image":"/images/weird_crocs.jpeg","description":"The weirdest thing i have ever seen in fashion"},{"sku":8,"name":"Givenchy shoes","price":700,"category":"M","image":"/images/givenchy_shoes.jpeg","description":"Givenchy's forward-thinking graphic aesthetic lends itself to these Spectre low-top sneakers with technical detailing seen in the double lace and side-zip logo fastening."},{"sku":9,"name":"Weird Crocs2","price":515,"category":"M","image":"/images/weird_crocs.jpeg","description":"The weirdest thing i have ever seen in fashion"},{"sku":10,"name":"Givenchy shoes2","price":705,"category":"W","image":"/images/givenchy_shoes.jpeg","description":"Givenchy's forward-thinking graphic aesthetic lends itself to these Spectre low-top sneakers with technical detailing seen in the double lace and side-zip logo fastening."},{"sku":11,"name":"Weird Crocs3","price":520,"category":"W","image":"/images/weird_crocs.jpeg","description":"The weirdest thing i have ever seen in fashion"},{"sku":12,"name":"Givenchy shoes3","price":710,"category":"W","image":"/images/givenchy_shoes.jpeg","description":"Givenchy's forward-thinking graphic aesthetic lends itself to these Spectre low-top sneakers with technical detailing seen in the double lace and side-zip logo fastening."},{"sku":13,"name":"Weird Crocs","price":510,"category":"M","image":"/images/weird_crocs.jpeg","description":"The weirdest thing i have ever seen in fashion"},{"sku":14,"name":"Givenchy shoes","price":700,"category":"M","image":"/images/givenchy_shoes.jpeg","description":"Givenchy's forward-thinking graphic aesthetic lends itself to these Spectre low-top sneakers with technical detailing seen in the double lace and side-zip logo fastening."},{"sku":15,"name":"Weird Crocs2","price":515,"category":"M","image":"/images/weird_crocs.jpeg","description":"The weirdest thing i have ever seen in fashion"},{"sku":16,"name":"Givenchy shoes2","price":705,"category":"W","image":"/images/givenchy_shoes.jpeg","description":"Givenchy's forward-thinking graphic aesthetic lends itself to these Spectre low-top sneakers with technical detailing seen in the double lace and side-zip logo fastening."},{"sku":17,"name":"Weird Crocs3","price":520,"category":"W","image":"/images/weird_crocs.jpeg","description":"The weirdest thing i have ever seen in fashion"},{"sku":18,"name":"Givenchy shoes3","price":710,"category":"W","image":"/images/givenchy_shoes.jpeg","description":"Givenchy's forward-thinking graphic aesthetic lends itself to these Spectre low-top sneakers with technical detailing seen in the double lace and side-zip logo fastening."},{"sku":19,"name":"Weird Crocs","price":510,"category":"M","image":"/images/weird_crocs.jpeg","description":"The weirdest thing i have ever seen in fashion"},{"sku":20,"name":"Givenchy shoes","price":700,"category":"M","image":"/images/givenchy_shoes.jpeg","description":"Givenchy's forward-thinking graphic aesthetic lends itself to these Spectre low-top sneakers with technical detailing seen in the double lace and side-zip logo fastening."},{"sku":21,"name":"Weird Crocs2","price":515,"category":"M","image":"/images/weird_crocs.jpeg","description":"The weirdest thing i have ever seen in fashion"},{"sku":22,"name":"Givenchy shoes2","price":705,"category":"W","image":"/images/givenchy_shoes.jpeg","description":"Givenchy's forward-thinking graphic aesthetic lends itself to these Spectre low-top sneakers with technical detailing seen in the double lace and side-zip logo fastening."},{"sku":23,"name":"Weird Crocs3","price":520,"category":"W","image":"/images/weird_crocs.jpeg","description":"The weirdest thing i have ever seen in fashion"},{"sku":24,"name":"Givenchy shoes3","price":710,"category":"W","image":"/images/givenchy_shoes.jpeg","description":"Givenchy's forward-thinking graphic aesthetic lends itself to these Spectre low-top sneakers with technical detailing seen in the double lace and side-zip logo fastening."},{"name":"","sku":522599,"price":0,"category":"M","description":"","image":""}]
+[
+  {
+    "sku": 1,
+    "name": "Weird Crocs",
+    "price": 510,
+    "category": "M",
+    "image": "/images/weird_crocs.jpeg",
+    "description": "The weirdest thing i have ever seen in fashion"
+  },
+  {
+    "sku": 2,
+    "name": "Givenchy shoes",
+    "price": 700,
+    "category": "M",
+    "image": "/images/givenchy_shoes.jpeg",
+    "description": "Givenchy's forward-thinking graphic aesthetic lends itself to these Spectre low-top sneakers with technical detailing seen in the double lace and side-zip logo fastening."
+  },
+  {
+    "sku": 3,
+    "name": "Weird Crocs2",
+    "price": 515,
+    "category": "M",
+    "image": "/images/weird_crocs.jpeg",
+    "description": "The weirdest thing i have ever seen in fashion"
+  },
+  {
+    "sku": 4,
+    "name": "Givenchy shoes2",
+    "price": 705,
+    "category": "W",
+    "image": "/images/givenchy_shoes.jpeg",
+    "description": "Givenchy's forward-thinking graphic aesthetic lends itself to these Spectre low-top sneakers with technical detailing seen in the double lace and side-zip logo fastening."
+  },
+  {
+    "sku": 5,
+    "name": "Weird Crocs3",
+    "price": 520,
+    "category": "W",
+    "image": "/images/weird_crocs.jpeg",
+    "description": "The weirdest thing i have ever seen in fashion"
+  },
+  {
+    "sku": 6,
+    "name": "Givenchy shoes3",
+    "price": 710,
+    "category": "W",
+    "image": "/images/givenchy_shoes.jpeg",
+    "description": "Givenchy's forward-thinking graphic aesthetic lends itself to these Spectre low-top sneakers with technical detailing seen in the double lace and side-zip logo fastening."
+  },
+  {
+    "sku": 7,
+    "name": "Weird Crocs",
+    "price": 510,
+    "category": "M",
+    "image": "/images/weird_crocs.jpeg",
+    "description": "The weirdest thing i have ever seen in fashion"
+  },
+  {
+    "sku": 8,
+    "name": "Givenchy shoes",
+    "price": 700,
+    "category": "M",
+    "image": "/images/givenchy_shoes.jpeg",
+    "description": "Givenchy's forward-thinking graphic aesthetic lends itself to these Spectre low-top sneakers with technical detailing seen in the double lace and side-zip logo fastening."
+  },
+  {
+    "sku": 9,
+    "name": "Weird Crocs2",
+    "price": 515,
+    "category": "M",
+    "image": "/images/weird_crocs.jpeg",
+    "description": "The weirdest thing i have ever seen in fashion"
+  },
+  {
+    "sku": 10,
+    "name": "Givenchy shoes2",
+    "price": 705,
+    "category": "W",
+    "image": "/images/givenchy_shoes.jpeg",
+    "description": "Givenchy's forward-thinking graphic aesthetic lends itself to these Spectre low-top sneakers with technical detailing seen in the double lace and side-zip logo fastening."
+  },
+  {
+    "sku": 11,
+    "name": "Weird Crocs3",
+    "price": 520,
+    "category": "W",
+    "image": "/images/weird_crocs.jpeg",
+    "description": "The weirdest thing i have ever seen in fashion"
+  },
+  {
+    "sku": 12,
+    "name": "Givenchy shoes3",
+    "price": 710,
+    "category": "W",
+    "image": "/images/givenchy_shoes.jpeg",
+    "description": "Givenchy's forward-thinking graphic aesthetic lends itself to these Spectre low-top sneakers with technical detailing seen in the double lace and side-zip logo fastening."
+  },
+  {
+    "sku": 13,
+    "name": "Weird Crocs",
+    "price": 510,
+    "category": "M",
+    "image": "/images/weird_crocs.jpeg",
+    "description": "The weirdest thing i have ever seen in fashion"
+  },
+  {
+    "sku": 14,
+    "name": "Givenchy shoes",
+    "price": 700,
+    "category": "M",
+    "image": "/images/givenchy_shoes.jpeg",
+    "description": "Givenchy's forward-thinking graphic aesthetic lends itself to these Spectre low-top sneakers with technical detailing seen in the double lace and side-zip logo fastening."
+  },
+  {
+    "sku": 15,
+    "name": "Weird Crocs2",
+    "price": 515,
+    "category": "M",
+    "image": "/images/weird_crocs.jpeg",
+    "description": "The weirdest thing i have ever seen in fashion"
+  },
+  {
+    "sku": 16,
+    "name": "Givenchy shoes2",
+    "price": 705,
+    "category": "W",
+    "image": "/images/givenchy_shoes.jpeg",
+    "description": "Givenchy's forward-thinking graphic aesthetic lends itself to these Spectre low-top sneakers with technical detailing seen in the double lace and side-zip logo fastening."
+  },
+  {
+    "sku": 17,
+    "name": "Weird Crocs3",
+    "price": 520,
+    "category": "W",
+    "image": "/images/weird_crocs.jpeg",
+    "description": "The weirdest thing i have ever seen in fashion"
+  },
+  {
+    "sku": 18,
+    "name": "Givenchy shoes3",
+    "price": 710,
+    "category": "W",
+    "image": "/images/givenchy_shoes.jpeg",
+    "description": "Givenchy's forward-thinking graphic aesthetic lends itself to these Spectre low-top sneakers with technical detailing seen in the double lace and side-zip logo fastening."
+  },
+  {
+    "sku": 19,
+    "name": "Weird Crocs",
+    "price": 510,
+    "category": "M",
+    "image": "/images/weird_crocs.jpeg",
+    "description": "The weirdest thing i have ever seen in fashion"
+  },
+  {
+    "sku": 20,
+    "name": "Givenchy shoes",
+    "price": 700,
+    "category": "M",
+    "image": "/images/givenchy_shoes.jpeg",
+    "description": "Givenchy's forward-thinking graphic aesthetic lends itself to these Spectre low-top sneakers with technical detailing seen in the double lace and side-zip logo fastening."
+  },
+  {
+    "sku": 21,
+    "name": "Weird Crocs2",
+    "price": 515,
+    "category": "M",
+    "image": "/images/weird_crocs.jpeg",
+    "description": "The weirdest thing i have ever seen in fashion"
+  },
+  {
+    "sku": 22,
+    "name": "Givenchy shoes2",
+    "price": 705,
+    "category": "W",
+    "image": "/images/givenchy_shoes.jpeg",
+    "description": "Givenchy's forward-thinking graphic aesthetic lends itself to these Spectre low-top sneakers with technical detailing seen in the double lace and side-zip logo fastening."
+  },
+  {
+    "sku": 23,
+    "name": "Weird Crocs3",
+    "price": 520,
+    "category": "W",
+    "image": "/images/weird_crocs.jpeg",
+    "description": "The weirdest thing i have ever seen in fashion"
+  },
+  {
+    "sku": 24,
+    "name": "Givenchy shoes3",
+    "price": 710,
+    "category": "W",
+    "image": "/images/givenchy_shoes.jpeg",
+    "description": "Givenchy's forward-thinking graphic aesthetic lends itself to these Spectre low-top sneakers with technical detailing seen in the double lace and side-zip logo fastening."
+  },
+  {
+    "name": "",
+    "sku": 522599,
+    "price": 0,
+    "category": "M",
+    "description": "",
+    "image": ""
+  }
+]
