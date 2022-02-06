@@ -80,7 +80,6 @@ export function* addProduct({
   try {
     const productSku = Math.floor(100000 + Math.random() * 900000);
     const token = localStorage.getItem("accessToken");
-    console.log("desc " + productDescription);
     const data = yield call(axiosCall, {
       method: "POST",
       path: "/api/store/products/",
@@ -94,7 +93,6 @@ export function* addProduct({
         image: productThumbnail,
       },
     });
-    console.log(data);
 
     yield put(fetchProductsStart({ filterType: null, pageNav: pageNav }));
   } catch (err) {

@@ -125,7 +125,6 @@ app.post("/api/store/products", authenticateJWT, (req, res) => {
     res.status(401).send("Item exists");
   } else {
     const new_products = [...products, product];
-    console.log(new_products);
     saveData(new_products, "./db/products.json");
     res.status(200).send("Item added");
   }
@@ -144,7 +143,6 @@ app.delete("/api/store/products", authenticateJWT, (req, res) => {
       const new_products = products.filter(
         (product) => parseInt(product.sku) !== parseInt(params.sku)
       );
-      console.log(new_products);
       saveData(new_products, "./db/products.json");
       res.status(200).send("Item removed");
     }
