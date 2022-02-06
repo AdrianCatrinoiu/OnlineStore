@@ -25,7 +25,7 @@ export function* emailSignIn({ payload: { email, password } }) {
     yield put(
       signInSuccessAction({
         id: data.data.id,
-        ...data.data,
+        ...data.data.user,
       })
     );
   } catch (err) {
@@ -86,7 +86,7 @@ export function* signUpUser({
       yield put(
         signInSuccessAction({
           id: data.data.id,
-          ...data.data,
+          ...data.data.user,
         })
       );
       localStorage.setItem("accessToken", data.data.accessToken);

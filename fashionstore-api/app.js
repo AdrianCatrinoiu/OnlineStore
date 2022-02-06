@@ -128,8 +128,10 @@ app.post("/api/auth/login", (req, res) => {
     res.json({
       accessToken: token,
       user: {
+        id: user.id,
         email: user.email,
-        name: user.name,
+        last_name: user.lastName,
+        first_name: user.firstName,
         role: user.role,
       },
     });
