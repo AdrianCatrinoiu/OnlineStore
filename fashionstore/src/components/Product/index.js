@@ -9,7 +9,7 @@ const Product = (product) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { sku, name, price, image } = product;
-  if (!sku || !image || !name || typeof price === "undefined") return null;
+  if (!sku || !name || typeof price === "undefined") return null;
 
   const configAddToCartBtn = {
     type: "button",

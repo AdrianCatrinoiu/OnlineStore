@@ -33,7 +33,7 @@ const Navbar = (props) => {
         <nav>
           <ul>
             {isAdmin && (
-              <li>
+              <li id={2}>
                 <Link to="/admin">Admin panel</Link>
               </li>
             )}
@@ -48,13 +48,13 @@ const Navbar = (props) => {
         <div className="callToActions">
           <ul>
             {currentUser && [
-              <li>
+              <li id={1}>
                 <Link to="/cart">Your Cart({totalNumberCartItems})</Link>
               </li>,
-              <li>
+              <li id={2}>
                 <Link to="/dashboard">My account</Link>
               </li>,
-              <li>
+              <li id={3}>
                 <span onClick={() => signOut()}>Logout</span>
               </li>,
             ]}
@@ -62,11 +62,11 @@ const Navbar = (props) => {
 
           <ul>
             {!currentUser && [
-              <li>
+              <li id={1}>
                 <Link to="/register">Register</Link>
               </li>,
 
-              <li>
+              <li id={2}>
                 <Link to="/login">Login</Link>
               </li>,
             ]}

@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router";
 import "./styles.scss";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {
   selectCartItems,
   selectCartTotal,
@@ -9,12 +9,14 @@ import {
 import { createStructuredSelector } from "reselect";
 import Button from "../../forms/Button";
 import CartItem from "../CartItem";
+import { emptyCart } from "../../redux/Cart/cart.actions";
 const mapState = createStructuredSelector({
   cartItems: selectCartItems,
   total: selectCartTotal,
 });
 
 const Checkout = ({}) => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const { cartItems, total } = useSelector(mapState);
   return (
@@ -82,7 +84,9 @@ const Checkout = ({}) => {
                       </td>
                       <td>
                         <Button>
-                          <span>Checkout</span>
+                          <span onClick={() => dispatch(emptyCart())}>
+                            Checkout
+                          </span>
                         </Button>
                       </td>
                     </tr>

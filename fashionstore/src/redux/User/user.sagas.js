@@ -81,6 +81,7 @@ export function* signUpUser({
       yield put(
         signInSuccessAction({
           id: data.data.id,
+          role: "user",
           ...data.data.user,
         })
       );

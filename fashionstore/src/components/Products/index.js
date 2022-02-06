@@ -84,7 +84,7 @@ const ProductResults = () => {
       <div className="productResults">
         {data.map((product, pos) => {
           const { sku, name, price, image } = product;
-          if (!image || !name || typeof price === "undefined") return null;
+          if (!name || typeof price === "undefined") return null;
           const configProduct = {
             name,
             price,
