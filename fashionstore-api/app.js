@@ -3,6 +3,7 @@ const fs = require("fs");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const jwt = require("jsonwebtoken");
+const { start } = require("repl");
 const app = express();
 require("dotenv").config();
 
@@ -50,7 +51,22 @@ const paginatedResult = (page, array) => {
   const limit = 6;
   const startIndex = (page - 1) * limit;
   const endIndex = page * limit;
-  return array.slice(startIndex, endIndex);
+
+  let prev = false;
+  let next = false;
+  if (startIndex > 5) {
+    prev = true;
+  }
+  if (array.length > endIndex) {
+    next = true;
+  }
+  console.log(next + " " + prev);
+  const data = {
+    array: array.slice(startIndex, endIndex),
+    next,
+    prev,
+  };
+  return data;
 };
 /* Read - GET method */
 
@@ -63,19 +79,36 @@ app.get("/api/store/products", (req, res) => {
       (product) => product.category === params.category
     );
     if (params.page) {
-      const category_products_paginated = paginatedResult(
+      const { array, next, prev } = paginatedResult(
         params.page,
         category_products
       );
-      res.send(category_products_paginated);
+      const data = {
+        data: array,
+        next,
+        prev,
+      };
+      res.send(data);
     } else {
-      res.send(category_products);
+      const data = {
+        data: category_products,
+      };
+      res.send(data);
     }
   } else if (params.page) {
-    const paginated_products = paginatedResult(params.page, products);
-    res.send(paginated_products);
+    const { array, next, prev } = paginatedResult(params.page, products);
+    const data = {
+      data: array,
+      next,
+      prev,
+    };
+    console.log(data);
+    res.send(data);
   } else {
-    res.send(products);
+    const data = {
+      data: products,
+    };
+    res.send(data);
   }
 });
 
